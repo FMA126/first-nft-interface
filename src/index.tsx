@@ -4,7 +4,7 @@ import { Web3ReactProvider } from '@web3-react/core'
 import { providers } from 'ethers'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import App from './pages/App'
 import reportWebVitals from './reportWebVitals'
@@ -27,7 +27,6 @@ if (!!window.ethereum) {
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Link to="/mint">Mint</Link>
       <Web3ReactProvider getLibrary={getLibrary}>
         <App />
       </Web3ReactProvider>

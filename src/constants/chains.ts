@@ -12,3 +12,5 @@ export enum SupportedChainId {
 export const ALL_SUPPORTED_CHAIN_IDS: SupportedChainId[] = Object.values(SupportedChainId).filter(
   (id) => typeof id === 'number'
 ) as SupportedChainId[]
+
+export const COLOR_RINKEBY_ADDRESS = '0x02E64Dc9C99FA1b09B9b820d4f9cc65191ef7994'
