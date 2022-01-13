@@ -5,10 +5,11 @@ import React from 'react'
 
 export default function Mint() {
   const { active, account, activate, connector, deactivate, error, library } = useWeb3React()
-  const ColorContract = Color__factory.connect(COLOR_RINKEBY_ADDRESS, library)
-  console.log(library?.provider?.request())
+
   const handleMint = async () => {
-    await ColorContract.getNewItem(account as string)
+    const signer = library.getSigner(account)
+    const ColorContract = Color__factory.connect(COLOR_RINKEBY_ADDRESS, signer)
+    await ColorContract.getNewItem(account || '')
   }
   return (
     <>

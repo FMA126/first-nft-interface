@@ -1,7 +1,7 @@
 import './index.css'
 
+import { Web3Provider } from '@ethersproject/providers'
 import { Web3ReactProvider } from '@web3-react/core'
-import { providers } from 'ethers'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
@@ -9,8 +9,8 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import App from './pages/App'
 import reportWebVitals from './reportWebVitals'
 
-function getLibrary(provider: any): providers.Web3Provider {
-  return new providers.Web3Provider(
+function getLibrary(provider: any): Web3Provider {
+  return new Web3Provider(
     provider,
     typeof provider.chainId === 'number'
       ? provider.chainId
