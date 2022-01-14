@@ -5,12 +5,19 @@ import React from 'react'
 
 export default function Mint() {
   // { active, account, activate, connector, deactivate, error, library }
-  const { account, library } = useWeb3React()
+  const { active, account, library } = useWeb3React()
 
   const handleMint = async () => {
     const signer = library.getSigner(account)
     const ColorContract = Color__factory.connect(COLOR_RINKEBY_ADDRESS, signer)
     await ColorContract.getNewItem(account || '')
+  }
+  if (!active) {
+    return (
+      <>
+        <div>Please download MetaMask</div>
+      </>
+    )
   }
   return (
     <>
