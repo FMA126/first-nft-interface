@@ -45,7 +45,10 @@ export default function Collection() {
               <img alt="Color NFT" src={image.image_original_url} />
               <div>Index: {image.token_id}</div>
               <div>
-                Contract: <a href={image.permalink}>View on OpenSea</a>
+                Contract:{' '}
+                <a target="_blank" href={image.permalink} rel="noreferrer">
+                  View on OpenSea
+                </a>
               </div>
             </div>
           ))}
