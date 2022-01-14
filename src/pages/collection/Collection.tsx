@@ -5,7 +5,7 @@ import { COLOR_RINKEBY_ADDRESS } from 'constants/chains'
 import { useEffect, useState } from 'react'
 
 export default function Collection() {
-  const { active, account, activate, connector, deactivate, error, library } = useWeb3React()
+  const { active, account, library } = useWeb3React()
   const [tried, setTried] = useState(false)
   const [bal, setBal] = useState<BigNumber | undefined>()
   useEffect(() => {
@@ -27,6 +27,7 @@ export default function Collection() {
   return (
     <>
       <h1>My Collection</h1>
+      <div>{bal}</div>
     </>
   )
 }
