@@ -30,6 +30,7 @@ export default function Wallet() {
   if (!active) {
     return (
       <div className="nav-wallet">
+        <div>Switch Network to Rinkeby</div>
         <button onClick={handleConnect}>Connect MetaMask</button>
       </div>
     )

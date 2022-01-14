@@ -1,11 +1,14 @@
 nav {
   display: flex;
   align-items: baseline;
-  /* justify-content: space-between; */
+}
+
+nav a:hover {
+    background-color: rgb(224, 221, 221);
 }
 
 main {
-  margin: 0px 20px;
+  margin: 10px 20px;
 }
 
 a {
