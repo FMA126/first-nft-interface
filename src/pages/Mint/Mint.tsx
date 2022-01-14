@@ -1,3 +1,5 @@
+import './Mint.css'
+
 import { useWeb3React } from '@web3-react/core'
 import { Color__factory } from 'abis/types'
 import { COLOR_RINKEBY_ADDRESS } from 'constants/chains'
@@ -20,9 +22,11 @@ export default function Mint() {
     )
   }
   return (
-    <>
+    <div className="mint-container">
       <h1>Mint</h1>
-      <button onClick={handleMint}>Mint NFT</button>
-    </>
+      <button onClick={handleMint}>
+        Mint <span>🎨</span>
+      </button>
+    </div>
   )
 }

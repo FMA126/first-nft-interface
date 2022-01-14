@@ -3,6 +3,7 @@ export default function Home() {
   return (
     <div className="home-container">
       <h1>Colors NFT</h1>
+      <div className="pallete-emoji">🎨</div>
     </div>
   )
 }
