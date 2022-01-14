@@ -18,7 +18,7 @@ export default function Collection() {
         const ColorContract = Color__factory.connect(COLOR_RINKEBY_ADDRESS, signer)
         const colorBal = await ColorContract.balanceOf(account || '')
         const opeaSeaRes = await fetch(
-          'https://testnets-api.opensea.io/api/v1/assets?owner=0xE8A6cd1D5888bA85C87c5399DC17BBc7A214823B&asset_contract_address=0x02E64Dc9C99FA1b09B9b820d4f9cc65191ef7994&order_direction=desc&offset=0&limit=20',
+          `https://testnets-api.opensea.io/api/v1/assets?owner=${account}&asset_contract_address=0x02E64Dc9C99FA1b09B9b820d4f9cc65191ef7994&order_direction=desc&offset=0&limit=20`,
           { method: 'GET' }
         )
         const response = await opeaSeaRes.json()
