@@ -24,5 +24,9 @@ export default function Collection() {
       setTried(true)
     }
   }, [tried, active, account, library])
-  return <div>{JSON.stringify(bal)}</div>
+  return (
+    <>
+      <h1>My Collection</h1>
+    </>
+  )
 }

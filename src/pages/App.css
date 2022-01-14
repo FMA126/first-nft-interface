@@ -1,6 +1,11 @@
 nav {
   display: flex;
-  justify-content: space-between;
+  align-items: baseline;
+  /* justify-content: space-between; */
+}
+
+main {
+  margin: 0px 20px;
 }
 
 a {
@@ -8,7 +13,16 @@ a {
   color: black;
 }
 
-.nav-links {
+.nav-links-container {
   display: flex;
-  justify-content: space-evenly;
+  flex-grow: 3;
+  justify-content: center;
+}
+
+.nav-logo-container {
+  flex-grow: 1;
+}
+
+.nav-wallet-container {
+  flex-grow: 1;
 }

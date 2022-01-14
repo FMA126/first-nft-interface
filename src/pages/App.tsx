@@ -1,26 +1,26 @@
 import './App.css'
 
-import Collection from 'components/Collection/Collection'
-import Mint from 'components/Mint/Mint'
 import Wallet from 'components/Wallet/Wallet'
+import Collection from 'pages/collection/Collection'
+import Mint from 'pages/Mint/Mint'
 import { Link, Route, Routes } from 'react-router-dom'
 
 import Web3ReactManager from '../components/Web3ReactManager/Web3ReactManager'
-import Home from './Home'
+import Home from './home/Home'
 
 export default function App() {
   return (
     <Web3ReactManager>
       <main>
         <nav>
-          <div className="nav-logo">
+          <div className="nav-logo-container">
             <Link to="/">Colors NFT</Link>
           </div>
-          <div className="nav-links">
+          <div className="nav-links-container">
             <Link to="/mint">Mint</Link>
             <Link to="/collection">My Collection</Link>
           </div>
-          <div className="nav-wallet">
+          <div className="nav-wallet-container">
             <Wallet />
           </div>
         </nav>

@@ -11,9 +11,9 @@ export default function Web3ReactManager({ children }: { children: JSX.Element }
   useInactiveListener(!triedEager)
 
   // if the account context isn't active, and there's an error on the network context, it's an irrecoverable error
-  if (triedEager && !active) {
-    return <div>Oops! An unknown error occurred. Please refresh the page, or visit from another browser or device.</div>
-  }
+  // if (triedEager && !active) {
+  //   return <div>Oops! An unknown error occurred. Please refresh the page, or visit from another browser or device.</div>
+  // }
 
   return children
 }

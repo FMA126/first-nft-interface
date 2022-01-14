@@ -13,7 +13,7 @@ export default function Mint() {
   }
   return (
     <>
-      <div>Mint</div>
+      <h1>Mint</h1>
       <button onClick={handleMint}>Mint NFT</button>
     </>
   )
