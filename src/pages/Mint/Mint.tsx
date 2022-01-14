@@ -4,7 +4,8 @@ import { COLOR_RINKEBY_ADDRESS } from 'constants/chains'
 import React from 'react'
 
 export default function Mint() {
-  const { active, account, activate, connector, deactivate, error, library } = useWeb3React()
+  // { active, account, activate, connector, deactivate, error, library }
+  const { account, library } = useWeb3React()
 
   const handleMint = async () => {
     const signer = library.getSigner(account)

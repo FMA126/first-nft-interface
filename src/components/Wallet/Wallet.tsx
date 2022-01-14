@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 import { shortenAddress, shortenBalance } from 'utils'
 
 export default function Wallet() {
-  const { active, account, activate, connector, deactivate, error, library } = useWeb3React()
+  const { active, account, activate, library } = useWeb3React()
   const [ethBalance, setEthBalance] = useState<string | undefined>()
 
   useEffect(() => {
